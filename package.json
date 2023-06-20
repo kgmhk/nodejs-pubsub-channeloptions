@@ -1,13 +1,13 @@
 {
-  "name": "@google-cloud/pubsub",
-  "description": "Cloud Pub/Sub Client Library for Node.js",
+  "name": "google-cloud-pubsub-channel-options",
+  "description": "Cloud Pub/Sub Client Library for Node.js with ChannelOptions",
   "version": "3.7.1",
   "license": "Apache-2.0",
   "author": "Google Inc.",
   "engines": {
     "node": ">=12.0.0"
   },
-  "repository": "googleapis/nodejs-pubsub",
+  "repository": "kgmhk/nodejs-pubsub-channeloptions",
   "main": "./build/src/index.js",
   "types": "./build/src/index.d.ts",
   "files": [

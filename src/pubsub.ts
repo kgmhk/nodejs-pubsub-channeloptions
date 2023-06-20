@@ -68,7 +68,9 @@ const PROJECT_ID_PLACEHOLDER = '{{projectId}}';
 
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
-export interface ClientConfig extends gax.GrpcClientOptions {
+export interface ClientConfig
+  extends Partial<gax.grpc.ChannelOptions>,
+    gax.GrpcClientOptions {
   apiEndpoint?: string;
   servicePath?: string;
   port?: string | number;

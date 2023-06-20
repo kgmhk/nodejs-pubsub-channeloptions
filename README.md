@@ -8,7 +8,54 @@
 [![npm version](https://img.shields.io/npm/v/@google-cloud/pubsub.svg)](https://www.npmjs.org/package/@google-cloud/pubsub)
 
 
+# Usage
 
+```bash
+npm install nodejs-pubsub-channeloptions
+```
+
+```typescript
+import { PubSub } from '@google-cloud/pubsub';
+
+const pubsub = new PubSub({
+    /*
+      Add addtional ChannelOptions
+
+      interface ChannelOptions {
+        'grpc.ssl_target_name_override'?: string;
+        'grpc.primary_user_agent'?: string;
+        'grpc.secondary_user_agent'?: string;
+        'grpc.default_authority'?: string;
+        'grpc.keepalive_time_ms'?: number;
+        'grpc.keepalive_timeout_ms'?: number;
+        'grpc.keepalive_permit_without_calls'?: number;
+        'grpc.service_config'?: string;
+        'grpc.max_concurrent_streams'?: number;
+        'grpc.initial_reconnect_backoff_ms'?: number;
+        'grpc.max_reconnect_backoff_ms'?: number;
+        'grpc.use_local_subchannel_pool'?: number;
+        'grpc.max_send_message_length'?: number;
+        'grpc.max_receive_message_length'?: number;
+        'grpc.enable_http_proxy'?: number;
+        'grpc.http_connect_target'?: string;
+        'grpc.http_connect_creds'?: string;
+        'grpc.default_compression_algorithm'?: CompressionAlgorithms;
+        'grpc.enable_channelz'?: number;
+        'grpc.dns_min_time_between_resolutions_ms'?: number;
+        'grpc.enable_retries'?: number;
+        'grpc.per_rpc_retry_buffer_size'?: number;
+        'grpc.retry_buffer_size'?: number;
+        'grpc.max_connection_age_ms'?: number;
+        'grpc.max_connection_age_grace_ms'?: number;
+        'grpc-node.max_session_memory'?: number;
+        'grpc.service_config_disable_resolution'?: number;
+        [key: string]: any;
+      }
+    */
+    'grpc.keepalive_time_ms': 30000,
+    'grpc.keepalive_timeout_ms': 10000,
+});
+```
 
 [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs) is a fully-managed real-time messaging service that allows
 you to send and receive messages between independent applications.
